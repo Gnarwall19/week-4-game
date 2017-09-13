@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<h1>Guess This Number: <span id="target-number"></span>
+
+<div id="crystals">
+	<img class="crystal-img" src="assets/images/green.png">
+	<img class="crystal-img" src="assets/images/red.png">
+	<img class="crystal-img" src="assets/images/purple.png">
+	<img class="crystal-img" src="assets/images/yellow.png">
+</div>
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+	var counter = 0;
+	var targetNumber = Math.floor(Math.random() * 100 + 1);
+
+$("#target-number").html(targetNumber);
+
+$(".crystal-img").click(function() {
+	var num = Math.floor(Math.random() * 20 +1);
+
+	counter += num;
+	console.log(counter);
+
+	if (counter === targetNumber) {
+		alert("You Win!");
+		location.reload();
+		} else if (counter > targetNumber) {
+			alert("BUST! You Lose...");
+			location.reload();
+		}
+	
+});
+
+
+
+</script>
+</body>
+</html>
