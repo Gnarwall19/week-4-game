@@ -8,40 +8,16 @@
 
 <h1>Guess This Number: <span id="target-number"></span>
 
-<div id="crystals">
-	<img class="crystal-img" src="assets/images/green.png">
-	<img class="crystal-img" src="assets/images/red.png">
-	<img class="crystal-img" src="assets/images/purple.png">
-	<img class="crystal-img" src="assets/images/yellow.png">
+<div id="crystals"></div>
+
+<div id="resluts">
+	<h4>Wins: <span id="wins"></span></h4>
+	<h4>Losses: <span id="losses"></span></h4>
 </div>
+<div>Current Number: <span id="current-num"></span></div>
 
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript">
-
-	var counter = 0;
-	var targetNumber = Math.floor(Math.random() * 100 + 1);
-
-$("#target-number").html(targetNumber);
-
-$(".crystal-img").click(function() {
-	var num = Math.floor(Math.random() * 20 +1);
-
-	counter += num;
-	console.log(counter);
-
-	if (counter === targetNumber) {
-		alert("You Win!");
-		location.reload();
-		} else if (counter > targetNumber) {
-			alert("BUST! You Lose...");
-			location.reload();
-		}
-	
-});
-
-
-
-</script>
+  <script type="text/javascript" src="assets/javascript/script.js"></script>
 </body>
 </html>
