@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 	var crystals = ["assets/images/green.png", "assets/images/red.png", "assets/images/purple.png", "assets/images/yellow.png"]
+	var shimmer = new Audio("assets/audio/shimmer.mp3");
 
 	var wins = 0;
 	var losses = 0;
@@ -46,6 +47,7 @@ $(document).ready(function() {
 			if (counter == targetNumber) {
 				console.log("win");
 				wins++;
+				shimmer.play();
 				$("#wins").text(wins);
 				$("#crystals").empty();
 				crystalGen();

@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!--<link rel="stylesheet" type="text/css" href="assets/css/reset.css">-->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Oldenburg" rel="stylesheet">
 	<title></title>
 </head>
 <body>
 
+	<h1 id="title">Crystal Collector!</h1>
 
-<h1>Guess This Number: <span id="target-number"></span>
+	<div class="container">
+		<p>You will be given a random number at the start of the game.</p>
 
-<div id="crystals"></div>
+		<p>There are four crystals below. When a crystal is clicked,<br>a specific number of points will be added to your total score.</p>
 
-<div id="resluts">
-	<h4>Wins: <span id="wins"></span></h4>
-	<h4>Losses: <span id="losses"></span></h4>
-</div>
-<div>Current Number: <span id="current-num"></span></div>
+		<p>The game is one when your <strong>Current Number</strong> matches<br> the Target Number exactly. The game is lost if your<br><strong>Current Number</strong> exceeds the Target Number.</p>
 
+		<p>The number value of each crystal will be hidden from you<br> and can only be made known by clicking it and deducing it's<br>value based on the amount added to your <strong>Current Number</strong>.</p>
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="assets/javascript/script.js"></script>
+		<p>Each crystal will be assigned a new number at random by<br>
+		the start of each round.</p>
+
+		<h5>Good Luck.</h5>
+	</div>
+
+	<div id="game">
+		<h1>Guess the Number: <span id="target-number"></span></h1>
+
+		<div id="crystals"></div>
+
+		<div id="resluts">
+			<h3>Wins: <span id="wins"></span></h3>
+			<h3>Losses: <span id="losses"></span></h3>
+		</div>
+		<h1>Current Number: <span id="current-num"></span></h1>
+	</div>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/javascript/script.js"></script>
 </body>
 </html>
