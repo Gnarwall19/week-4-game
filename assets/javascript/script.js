@@ -31,6 +31,7 @@ $(document).ready(function() {
 
 
 	function reset() {
+		crystalNumbers = [];
 		var counter = 0;
 		$("#current-num").text(counter);
 
@@ -67,11 +68,3 @@ crystalGen();
 reset();
 
 	});
-
-
-
-
-
-
-
-
