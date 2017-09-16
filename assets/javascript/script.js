@@ -1,17 +1,21 @@
 $(document).ready(function() {
 
+	//array that holds crystal images
 	var crystals = ["assets/images/green.png", "assets/images/red.png", "assets/images/purple.png", "assets/images/yellow.png"]
+	//shimmer sound
 	var shimmer = new Audio("assets/audio/shimmer.mp3");
 
 	var wins = 0;
 	var losses = 0;
-	var crystalNumbers = [];
-	var targetNumber = Math.floor(Math.random() * (120 - 19) + 19);
+	var crystalNumbers = [];	//empty array to be filled with random numbers
+	var targetNumber = Math.floor(Math.random() * (120 - 19) + 19);		//generates a random number between 19 & 120
 
+	//displays wins and losses on html page
 	$("#wins").text(wins);
 	$("#losses").text(losses);
 
 
+	//function generates four random numbers and pushes them to the crystalNumbers array then assigns each number to a image in the crystal array
 	function crystalGen() {
 
 
@@ -30,7 +34,7 @@ $(document).ready(function() {
 		}
 	}
 
-
+	//calculates wins and losses and resets variables after a win or loss
 	function reset() {
 		crystalNumbers = [];
 		var counter = 0;
