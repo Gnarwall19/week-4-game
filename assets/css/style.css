@@ -37,3 +37,41 @@ p {
 	padding: 5px;
 
 }
+
+
+/*media queries*/
+
+@media screen and (max-width: 980px) {
+	body {
+		min-height: 100%
+	}
+
+
+
+/*Tablet*/
+@media screen and (max-width: 768px) {
+	body {
+		min-height: 100%;
+		margin: 0 auto;
+	}
+}
+
+
+/*phone*/
+@media screen and (max-width: 640px) {
+	body {
+		min-height: 1000px;
+		margin: 0 auto;
+	}
+
+	div {
+		width: 100%;
+		margin: 0 auto;
+
+}
+
+
+/*smaller phone*/
+@media screen and (max-width: 480px) {
+
+}

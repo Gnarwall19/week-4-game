@@ -40,7 +40,7 @@ $(document).ready(function() {
 		$("#target-number").text(targetNumber);
 
 		$(".crystal-img").on("click", function() {
-			counter = counter + parseInt($(this).data("num"));
+			counter += parseInt($(this).data("num"));
 
 			$("#current-num").text(counter);
 
